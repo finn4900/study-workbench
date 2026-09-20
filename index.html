@@ -11,7 +11,7 @@
   if(needsPolyfill){
     document.write('<script src="/study-workbench/assets/polyfills.js"><\/script>');
   }
-})();</script><script>window.appId = "study-workbench";
+})();</script><script type="module" crossorigin src="/study-workbench/assets/polyfills-CrrsuOIq.js"></script><script>window.appId = "study-workbench";
     window.userId = "local-user";
     window.tenantId = "local-tenant";
     window.userName = "小朋友";
@@ -64,8 +64,8 @@
     slardarScript.onload = function() {
       if (window.KSlardarWeb) {
         window.KSlardarWeb('context.merge', {
-          tenantId: window.tenantId ?? '',
-          appId: window.appId ?? '',
+          tenantId: window.tenantId || '',
+          appId: window.appId || '',
           stack_version: "0.1.0",
           app_type: 6,
           arch_type: 2,
@@ -73,7 +73,7 @@
         window.KSlardarWeb('init', {
           bid: 'apaas_miaoda',
           env: window.ENVIRONMENT || 'online',
-          userId: window.userId ?? '',
+          userId: window.userId || '',
         });
         window.KSlardarWeb('start');
         // Flush errors captured before the SDK finished loading
@@ -104,4 +104,29 @@
   teaScript.onerror = function() {
     console.warn('Failed to load Tea script');
   };
-  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lok学习工作台</title><script type="module" crossorigin src="/study-workbench/assets/index-1CWNTj5W.js"></script><link rel="modulepreload" crossorigin href="/study-workbench/assets/rolldown-runtime-C_JJxWoe.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/chart-vendor-BLWlzlZk.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/react-vendor-B9B9P2Ev.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/util-vendor-SziTyHt5.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/vendor-DWOM4HFN.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/ui-vendor-DqTmBWLz.js"><link rel="stylesheet" crossorigin href="/study-workbench/assets/index-BgSqmmhR.css"><meta property="og:title" content="Lok学习工作台"><meta property="og:description" content="小孩学习记录工作台 - 一站式管理学习任务、知识点、错题与练习"><meta property="og:image" content="/study-workbench/favicon.svg"><meta name="description" content="小孩学习记录工作台 - 一站式管理学习任务、知识点、错题与练习"><link rel="icon" href="/study-workbench/favicon.svg"><script type="module">import'data:text/javascript,if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script><script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script></head><body><div id="root"></div><script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script nomodule crossorigin id="vite-legacy-polyfill" src="/study-workbench/assets/polyfills-legacy-CvS4c8nD.js"></script><script nomodule crossorigin id="vite-legacy-entry" data-src="/study-workbench/assets/index-legacy-fBWbnbVO.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script></body></html>
+  document.head.appendChild(teaScript);</script><meta charset="UTF-8"><script>
+(function() {
+  window.__appBootFailed = false;
+  window.__appBootErrors = [];
+  var oldOnError = window.onerror;
+  window.onerror = function(msg, url, line, col, err) {
+    window.__appBootFailed = true;
+    window.__appBootErrors.push(msg + " (" + url + ":" + line + ")");
+    if (oldOnError) return oldOnError.apply(this, arguments);
+    return false;
+  };
+  setTimeout(function() {
+    var root = document.getElementById("root");
+    if (root && root.innerHTML.trim() === "" && window.__appBootFailed) {
+      var html = '<div style="position:fixed;top:0;left:0;right:0;bottom:0;background:#f5f7fa;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei,sans-serif;z-index:99999;padding:20px;">';
+      html += '<div style="max-width:400px;background:#fff;border-radius:12px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.1);text-align:center;">';
+      html += '<div style="font-size:48px;margin-bottom:12px;">&#128241;</div>';
+      html += '<h2 style="font-size:18px;color:#1f2937;margin:0 0 8px 0;">浏览器版本过低</h2>';
+      html += '<p style="font-size:14px;color:#6b7280;line-height:1.6;margin:0 0 16px 0;">您的设备系统版本较低，部分功能可能无法正常使用。</p>';
+      html += '<p style="font-size:13px;color:#9ca3af;line-height:1.5;margin:0;">建议升级到 iOS 13 及以上版本，或使用最新版 Chrome / Safari 浏览器访问。</p>';
+      html += '</div></div>';
+      document.body.innerHTML = html;
+    }
+  }, 3000);
+})();
+</script><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lok学习工作台</title><script type="module" crossorigin src="/study-workbench/assets/index-1CWNTj5W.js"></script><link rel="modulepreload" crossorigin href="/study-workbench/assets/rolldown-runtime-C_JJxWoe.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/chart-vendor-BLWlzlZk.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/react-vendor-B9B9P2Ev.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/util-vendor-SziTyHt5.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/vendor-DWOM4HFN.js"><link rel="modulepreload" crossorigin href="/study-workbench/assets/ui-vendor-DqTmBWLz.js"><link rel="stylesheet" crossorigin href="/study-workbench/assets/index-BgSqmmhR.css"><meta property="og:title" content="Lok学习工作台"><meta property="og:description" content="小孩学习记录工作台 - 一站式管理学习任务、知识点、错题与练习"><meta property="og:image" content="/study-workbench/favicon.svg"><meta name="description" content="小孩学习记录工作台 - 一站式管理学习任务、知识点、错题与练习"><link rel="icon" href="/study-workbench/favicon.svg"><script type="module">import'data:text/javascript,if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script><script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script></head><body><div id="root"></div><script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script nomodule crossorigin id="vite-legacy-polyfill" src="/study-workbench/assets/polyfills-legacy-DOb4rIlu.js"></script><script nomodule crossorigin id="vite-legacy-entry" data-src="/study-workbench/assets/index-legacy-fBWbnbVO.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script></body></html>
