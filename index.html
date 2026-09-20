@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/study-workbench/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lok学习工作台</title>
+    <link href="https://lf3-static.bytednsdoc.com/obj/eden-cn/ylcylz_fsph_ryhs/ljhwZthlaukjlkulzlp/feisuda/feisuda.svg" rel="shortcut icon"/>
+    <!-- 浏览器兼容性检测：在所有脚本之前执行，老浏览器直接显示友好提示 -->
+    <script>
+      // 注意：此脚本必须用 ES5 语法编写，不能用任何新语法
+      (function() {
+        'use strict';
+        var checks = [];
+        function check(name, fn) {
+          try { checks.push({ name: name, ok: !!fn() }); } catch(e) { checks.push({ name: name, ok: false }); }
+        }
+        check('Promise', function() { return typeof Promise !== 'undefined' && typeof Promise.resolve === 'function'; });
+        check('fetch', function() { return typeof fetch !== 'undefined'; });
+        check('Map/Set', function() { return typeof Map !== 'undefined' && typeof Set !== 'undefined'; });
+        check('Object.assign', function() { return typeof Object.assign === 'function'; });
+        check('Array.from', function() { return typeof Array.from === 'function'; });
+        try { new Function('var x = `hello ${1 + 1}`; return x;'); checks.push({ name: 'Template Literals', ok: true }); } catch(e) { checks.push({ name: 'Template Literals', ok: false }); }
+        try { new Function('"use strict"; var a = 1; var b = 2; return a + b;'); checks.push({ name: 'let/const', ok: true }); } catch(e) { checks.push({ name: 'let/const', ok: false }); }
+        try { new Function('return function(x) { return x + 1; };'); checks.push({ name: 'Arrow Functions', ok: true }); } catch(e) { checks.push({ name: 'Arrow Functions', ok: false }); }
+        var failed = [];
+        for (var i = 0; i < checks.length; i++) { if (!checks[i].ok) failed.push(checks[i].name); }
+        if (failed.length > 0) {
+          var html = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;padding:24px;">';
+          html += '<div style="max-width:520px;background:#fff;border-radius:12px;padding:32px 28px;box-shadow:0 4px 20px rgba(0,0,0,0.06);text-align:center;">';
+          html += '<div style="width:56px;height:56px;border-radius:50%;background:#fef3c7;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;">⚠️</div>';
+          html += '<h2 style="margin:0 0 12px;font-size:20px;color:#1e293b;">浏览器版本过低</h2>';
+          html += '<p style="margin:0 0 8px;font-size:14px;line-height:1.7;color:#475569;">您当前使用的浏览器版本较旧，部分功能无法正常运行。</p>';
+          html += '<p style="margin:0 0 20px;font-size:13px;line-height:1.7;color:#64748b;">建议升级到最新版本的 Safari、Chrome 或 Edge 浏览器后再访问。<br>iOS 用户可通过「设置 → 通用 → 软件更新」升级系统以更新 Safari。</p>';
+          html += '<div style="text-align:left;background:#f8fafc;border-radius:8px;padding:12px 16px;font-size:12px;color:#64748b;">';
+          html += '<div style="margin-bottom:6px;color:#475569;font-weight:500;">检测到的不兼容项：</div>';
+          for (var j = 0; j < failed.length; j++) { html += '<div style="padding:2px 0">• ' + failed[j] + '</div>'; }
+          html += '</div></div></div>';
+          // 阻止后续脚本执行：先清空 body，再抛错
+          document.open();
+          document.write(html);
+          document.close();
+          throw new Error('Browser compatibility check failed');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/study-workbench/assets/index-_Wo4KwJl.js"></script>
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/rolldown-runtime-C_JJxWoe.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/chart-vendor-F0n9zpuI.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/react-vendor-RSqR-5hI.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/anki-vendor-DF4RdN5Z.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/util-vendor-BvXu8p1-.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/vendor-CBRs6tAX.js">
+    <link rel="modulepreload" crossorigin href="/study-workbench/assets/ui-vendor-C91ySTi1.js">
+    <link rel="stylesheet" crossorigin href="/study-workbench/assets/index-BHsVqrNS.css">
+    <script type="module">import'data:text/javascript,if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
+    <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding:40px;text-align:center;font-family:sans-serif;">
+        <h2>需要启用 JavaScript</h2>
+        <p>本应用需要 JavaScript 才能正常运行，请在浏览器设置中启用 JavaScript 后刷新页面。</p>
+      </div>
+    </noscript>
+    <!-- 加载中提示（JS 可用时很快被替换） -->
+    <div id="root">
+      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:-apple-system,sans-serif;color:#64748b;">
+        <div style="text-align:center;">
+          <div style="width:32px;height:32px;border:3px solid #e2e8f0;border-top-color:#10b981;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px;"></div>
+          <div>加载中...</div>
+        </div>
+      </div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+    </div>
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/study-workbench/assets/polyfills-legacy-3TGJzgTV.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/study-workbench/assets/index-legacy-COD9hZPL.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  </body>
+</html>
