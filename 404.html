@@ -11,16 +11,16 @@
   if(needsPolyfill){
     document.write('<script src="/study-workbench/assets/polyfills.js"><\/script>');
   }
-})();</script><script>window.appId = "{{appId}}";
-    window.userId = "{{userId}}";
-    window.tenantId = "{{tenantId}}";
-    window.userName = "{{userName}}";
-    window.csrfToken = "{{csrfToken}}";
-    window.ENVIRONMENT = "{{environment}}";
-    window.__BASENAME__ = "{{basename}}";
+})();</script><script>window.appId = "study-workbench";
+    window.userId = "local-user";
+    window.tenantId = "local-tenant";
+    window.userName = "小朋友";
+    window.csrfToken = "";
+    window.ENVIRONMENT = "online";
+    window.__BASENAME__ = "/study-workbench";
     const appInfo = {
       name: "Lok学习工作台",
-      avatar: "{/study-workbench/favicon.svg}",
+      avatar: "/study-workbench/favicon.svg",
       description: "小孩学习记录工作台 - 一站式管理学习任务、知识点、错题与练习",
     };
     if (appInfo.name) {
